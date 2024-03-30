@@ -30,4 +30,6 @@ Usage
     Click the "Send Message" button to submit the form.
     Upon successful submission, you will see a success message confirming that the email has been sent.
 
+Note: PLEASE REFER THE PDF FILE, IF U WANT TO KNOW HOW TO GET MAIL PASSCODE.
+
     
