@@ -21,8 +21,15 @@ router.post('/send', (req, res) => {
     from: process.env.User,
     to: email,
     subject: 'Thank you for contacting us!',
-    text: `Dear ${name},\n\nThank you for reaching out to us. We have received your message and will get back to you as soon as possible.\n\nBest regards, \n`
+    html: `
+      <p style="font-size: 16px; color: #333; font-weight: bold;">Dear ${name},</p>
+      <p style="font-size: 14px; color: #666;">Thank you for reaching out to us. We have received your message and will get back to you as soon as possible.</p>
+      <p style="font-size: 14px; color: #666;">Your message: <span style="font-weight: bold;">${message}</span></p>
+      <p style="font-size: 14px; color: #666;">Best regards,</p>
+    `
   };
+  
+  
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
