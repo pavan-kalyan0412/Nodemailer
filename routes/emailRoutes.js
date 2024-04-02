@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 router.post('/send', (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email } = req.body;
   
 
   const transporter = nodemailer.createTransport({
@@ -24,7 +24,6 @@ router.post('/send', (req, res) => {
     html: `
       <p style="font-size: 16px; color: #333; font-weight: bold;">Dear ${name},</p>
       <p style="font-size: 14px; color: #666;">Thank you for reaching out to us. We have received your message and will get back to you as soon as possible.</p>
-      <p style="font-size: 14px; color: #666;">Your message: <span style="font-weight: bold;">${message}</span></p>
       <p style="font-size: 14px; color: #666;">Best regards,</p>
     `
   };

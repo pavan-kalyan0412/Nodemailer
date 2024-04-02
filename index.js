@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const emailRoutes = require('./routes/emailRoutes');
 const dotenv = require('dotenv')
+const Email = require('./models/Email');
 
 dotenv.config();
 
